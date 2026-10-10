@@ -1,0 +1,68 @@
+html
+<header class="navbar">
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="https://wa.me/5521970492910" target="_blank">Contate-nos</a>
+</nav>
+</header>
+
+
+css
+*{
+    box-sizing: border-box;
+    margin: 0;
+    back
+}
+body{
+    background-color: #1672e4;
+    color: #40536b;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section {
+    scroll-margin-top: 80px;
+}
+
+a {
+    transition: 0.3s ease;
+}
+
+a{
+text-decoration: none;
+}
+
+.navbar{
+    width: min(200px,calc(100% - 40px));
+background: #e4e9ef;
+    box-shadow: 8px 8px 18px #c1c9d3, -8px -8px 18px #fff;
+    margin: 25px auto;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+    border-radius: 18px;
+}
+
+nav{
+    display: flex;
+    gap: 32px;
+}
+
+nav a{
+color: #5d6e85;
+font-size: 15px;
+transition: .3s;
+}
+
+nav a:hover{
+    color: #0e3460;
+    transform: translateY(-3px);
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef8ff;
+    color: #263746;
+}

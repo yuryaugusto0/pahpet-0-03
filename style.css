@@ -1,0 +1,556 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef8ff;
+    color: #263746;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+a {
+    transition: 0.3s ease;
+}
+
+
+/* ========================================
+   MENU DE NAVEGAÇÃO
+======================================== */
+
+.navbar {
+    width: 100%;
+    padding: 18px 8%;
+    background-color: #087fbd;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.navbar nav ul li a:hover {
+    color: #bceaff;
+}
+
+.inicio {
+    min-height: 500px;
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        #087fbd,
+        #18a4e0
+    );
+
+    color: rgb(255, 255, 255);
+}
+
+.inicio-conteudo {
+    max-width: 750px;
+}
+
+.inicio h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 25px;
+
+    background-color: rgb(255, 255, 255);
+    color: #087fbd;
+
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #dff4ff;
+    transform: translateY(-3px);
+}
+
+.quem-somos {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.titulo h1 {
+    font-size: 38px;
+    color: #087fbd;
+    margin-bottom: 12px;
+}
+
+.titulo p {
+    font-size: 17px;
+    color: #627687;
+    margin-bottom: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.caixa {
+    background-color: white;
+    width: 300px;
+
+    padding: 0 0 25px;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 100, 160, 0.10);
+    border-bottom: 5px solid #18a4e0;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.caixa:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 100, 160, 0.18);
+}
+
+.caixa img {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+    display: block;
+
+    margin-bottom: 20px;
+}
+
+.caixa h2 {
+    color: #087fbd;
+    font-size: 23px;
+    margin: 0 15px 15px;
+}
+
+.caixa p {
+    color: #586b7a;
+    font-size: 15px;
+    line-height: 1.8;
+    padding: 0 20px;
+}
+
+
+.mensagem {
+    margin-top: 45px;
+    padding: 30px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #087fbd,
+        #18a4e0
+    );
+
+    color: white;
+    border-radius: 18px;
+}
+
+.mensagem h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.mensagem p {
+    font-size: 16px;
+}
+
+.precos {
+    padding: 60px 8%;
+    background-color: #eef8ff;
+    text-align: center;
+}
+
+.precos-titulo h1 {
+    font-size: 36px;
+    color: #087fbd;
+    margin-bottom: 12px;
+}
+
+.precos-titulo p {
+    font-size: 16px;
+    color: #627687;
+    margin-bottom: 45px;
+}
+
+
+
+.precos-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+
+.preco-card {
+    position: relative;
+
+    background-color: white;
+    width: 300px;
+    padding: 0 25px 30px;
+
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 100, 160, 0.10);
+    border: 1px solid #d9effb;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.preco-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 100, 160, 0.18);
+}
+
+
+.preco-card img {
+    width: calc(100% + 50px);
+    height: 180px;
+
+    object-fit: cover;
+    display: block;
+
+    margin: 0 -25px 22px;
+}
+
+
+.preco-card.destaque {
+    border: 2px solid #18a4e0;
+}
+
+.etiqueta {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    background-color: #087fbd;
+    color: white;
+
+    padding: 7px 12px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.preco-card h2 {
+    color: #087fbd;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.descricao {
+    color: #627687;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 45px;
+}
+
+.valor {
+    margin: 22px 0;
+    padding: 15px 0;
+
+    border-top: 1px solid #e1edf4;
+    border-bottom: 1px solid #e1edf4;
+}
+
+.valor span {
+    display: block;
+    color: #627687;
+    font-size: 13px;
+}
+
+.valor h3 {
+    color: #087fbd;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.preco-card ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.preco-card ul li {
+    color: #425768;
+    font-size: 14px;
+    margin-bottom: 13px;
+}
+
+
+.botao-preco {
+    display: block;
+
+    background-color: #087fbd;
+    color: white;
+
+    text-decoration: none;
+    padding: 13px;
+
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.botao-preco:hover {
+    background-color: #056496;
+}
+
+
+.aviso-precos {
+    margin-top: 30px;
+    color: #627687;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+.contato {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: white;
+}
+
+.contato h2 {
+    color: #087fbd;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    color: #586b7a;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #087fbd;
+    color: white;
+    padding: 45px 8% 20px;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-caixa {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-caixa h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.footer-caixa h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-caixa p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #eaf7ff;
+}
+
+
+.footer-caixa ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-caixa ul li {
+    margin-bottom: 10px;
+}
+
+.footer-caixa ul li a {
+    color: #eaf7ff;
+    text-decoration: none;
+}
+
+.footer-caixa ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    margin-top: 35px;
+    padding-top: 20px;
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    margin-bottom: 8px;
+    color: #eaf7ff;
+}
+
+
+@media (max-width: 768px) {
+
+    /* MENU */
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 5%;
+    }
+
+    .navbar nav {
+        width: 100%;
+    }
+
+    .navbar nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar nav ul li a {
+        font-size: 14px;
+    }
+
+
+    .inicio {
+        min-height: 400px;
+        padding: 60px 5%;
+    }
+
+    .inicio h1 {
+        font-size: 34px;
+    }
+
+    .inicio p {
+        font-size: 16px;
+    }
+
+
+    .quem-somos {
+        padding: 40px 5%;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .caixa {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .mensagem h2 {
+        font-size: 21px;
+    }
+
+
+    .precos {
+        padding: 40px 5%;
+    }
+
+    .precos-titulo h1 {
+        font-size: 30px;
+    }
+
+    .precos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .preco-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+
+    .contato {
+        padding: 40px 5%;
+    }
+
+
+    .footer {
+        padding: 35px 6% 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-caixa {
+        min-width: 100%;
+    }
+}
